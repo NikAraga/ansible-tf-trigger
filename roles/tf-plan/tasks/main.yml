@@ -3,16 +3,16 @@
   name: "terraform plan"
   register: plan_result
   terraform: 
-    plan_file: "{{ project_dir }}/myplan.tfplan"
+    plan_file: "{{ projectDir }}/myplan.tfplan"
     backend_config: 
-      bucket: nik-s3-terraform-state
-      key: "{{ key }}"
-      region: us-east-2
+      bucket: "{{ s3BackendBucket }}"
+      key: "{{ s3BackendKey }}"
+      region: "{{ s3BackendRegion }}"
     force_init: true
-    project_path: "{{ project_dir }}"
+    project_path: "{{ projectDir }}"
     state: planned
     variables: 
-      Owner: "{{ Owner }}"
+      ownerName: "{{ ownerName }}"
       amiId: "{{ amiId }}"
       nameTag: "{{ nameTag }}"
       subnetId: "{{ subnetId }}"

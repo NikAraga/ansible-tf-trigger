@@ -1,7 +1,10 @@
-Owner: nikhil.araga
+ownerName: nikhil.araga
 amiId: ami-0b500ef59d8335eee
 nameTag: nik-test-ans-tf-1
-project_dir: /home/ec2-user/terraform
+projectDir: /var/lib/jenkins/jobs/terraform-plan/terraform
 subnetId: subnet-c9e652a1
-key: terraform112.tfstate
-bucket: nik-s3-terraform-state
+key: terraform112test.tfstate
+
+s3BackendBucket: nik-s3-terraform-state
+s3BackendKey: terraform_nik.tfstate
+s3BackendRegion: us-east-2
