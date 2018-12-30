@@ -1,0 +1,17 @@
+--- 
+- 
+  name: "terraform apply"
+  register: apply_result
+  terraform: 
+    plan_file: "{{ project_dir }}/myplan.tfplan"
+    project_path: "{{ project_dir }}"
+    state: present
+    variables: 
+      Owner: "{{ Owner }}"
+      amiId: "{{ amiId }}"
+      nameTag: "{{ nameTag }}"
+      subnetId: "{{ subnetId }}"
+- 
+  debug: 
+    var: apply_result.stdout_lines
+

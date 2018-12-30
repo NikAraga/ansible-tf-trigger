@@ -1,0 +1,21 @@
+--- 
+- 
+  name: "terraform plan"
+  register: plan_result
+  terraform: 
+    plan_file: "{{ project_dir }}/myplan.tfplan"
+    backend_config: 
+      bucket: nik-s3-terraform-state
+      key: "{{ key }}"
+      region: us-east-2
+    force_init: true
+    project_path: "{{ project_dir }}"
+    state: planned
+    variables: 
+      Owner: "{{ Owner }}"
+      amiId: "{{ amiId }}"
+      nameTag: "{{ nameTag }}"
+      subnetId: "{{ subnetId }}"
+- 
+  debug:
+    var: plan_result.stdout_lines
