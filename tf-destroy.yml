@@ -1,4 +1,5 @@
 ---
+### This playook executes terraform destroy on the target machine
 -
   gather_facts: false
   hosts: localhost
