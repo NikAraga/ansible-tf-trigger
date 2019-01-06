@@ -11,11 +11,12 @@
     force_init: true
     project_path: "{{ projectDir }}"
     state: present
-    variables: 
-      ownerName: "{{ ownerName }}"
-      amiId: "{{ amiId }}"
-      nameTag: "{{ nameTag }}"
-      subnetId: "{{ subnetId }}"
+    variables_file: "{{ projectDir }}/{{ tfVariablesFileName }}"
+#    variables: 
+#      ownerName: "{{ ownerName }}"
+#      amiId: "{{ amiId }}"
+#      nameTag: "{{ nameTag }}"
+#      subnetId: "{{ subnetId }}"
 - 
   debug:
     var: execute_result.stdout_lines

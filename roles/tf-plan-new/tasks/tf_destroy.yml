@@ -6,11 +6,6 @@
     plan_file: "{{ projectDir }}/myplan.tfplan"
     project_path: "{{ projectDir }}"
     state: absent
-    variables: 
-      ownerName: "{{ ownerName}}"
-      amiId: "{{ amiId }}"
-      nameTag: "{{ nameTag }}"
-      subnetId: "{{ subnetId }}"
 - 
   debug: 
     var: absent_result.stdout_lines

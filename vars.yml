@@ -1,9 +1,12 @@
 ### Playbook Variables to refer terraform vars
-ownerName: nikhil.araga
 amiId: ami-0b500ef59d8335eee
+subnetId: subnet-c9e652a1
+ownerName: nikhil.araga
 nameTag: nik-test-ans-tf-1
 projectDir: /var/lib/jenkins/jobs/terraform-plan/terraform
-subnetId: subnet-c9e652a1
+tfVariablesFileName: vars.tfvar
+
+
 
 ### Variables to refer S3_Backen_Configuration in Terraform 
 s3BackendBucket: nik-s3-terraform-state

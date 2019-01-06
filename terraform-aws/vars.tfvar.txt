@@ -1,0 +1,4 @@
+ownerName= "nikhil.edwf"
+amiId= "ami-0b500ef59d8335eee"
+nameTag= "nik-test-ans-tf-22131221"
+subnetId= "subnet-c9e652a1"
