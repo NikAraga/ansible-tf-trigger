@@ -1,0 +1,9 @@
+---
+### This playook executes terraform plan on the target machine
+-
+  gather_facts: false
+  hosts: localhost
+  vars_files:
+    - vars.yml  
+  roles:
+     - { role: tf-plan-new }

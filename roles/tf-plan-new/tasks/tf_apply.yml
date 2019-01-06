@@ -1,0 +1,12 @@
+--- 
+- 
+  name: "terraform apply"
+  register: apply_result
+  terraform: 
+    plan_file: "{{ projectDir }}/myplan.tfplan"
+    project_path: "{{ projectDir }}"
+    state: present
+- 
+  debug: 
+    var: apply_result.stdout_lines
+

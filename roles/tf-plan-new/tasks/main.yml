@@ -1,0 +1,14 @@
+---
+# working with multiple tags
+#
+  - include: tf_plan.yml
+    tags: plan
+
+  - include: tf_execute.yml
+    tags: execute
+
+  - include: tf_apply.yml
+    tags: apply
+
+  - include: tf_destroy.yml
+    tags: destroy        

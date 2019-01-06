@@ -1,0 +1,12 @@
+--- 
+- 
+  name: "terraform destroy"
+  register: absent_result
+  terraform: 
+    plan_file: "{{ projectDir }}/myplan.tfplan"
+    project_path: "{{ projectDir }}"
+    state: absent
+- 
+  debug: 
+    var: absent_result.stdout_lines
+
